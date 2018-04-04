@@ -147,7 +147,7 @@ public class ImageContainer {
             
             blob.downloadToFile(downloadedFile.getAbsolutePath());
             String imageURI = blob.getUri().toString();
-            getImageRecognitionProperties(imageURI);
+            //getImageRecognitionProperties(imageURI);
             
             
         } catch (URISyntaxException ex) {
@@ -159,52 +159,52 @@ public class ImageContainer {
         }
     }
     
-    public static void getImageRecognitionProperties(String imageuri) {
-        
-        HttpClient httpclient = new DefaultHttpClient();
-
-        try
-        {
-            URIBuilder builder = new URIBuilder(uriBase);
-
-            // Request parameters. All of them are optional.
-            builder.setParameter("visualFeatures", "Categories,Description,Color");
-            builder.setParameter("language", "en");
-
-            // Prepare the URI for the REST API call.
-            URI uri = builder.build();
-            HttpPost request = new HttpPost(uri);
-
-            // Request headers.
-            request.setHeader("Content-Type", "application/json");
-            request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
-
-            // Request body.
-            StringEntity reqEntity = new StringEntity("{\"url\":\""+imageuri+"\"}");
-            request.setEntity(reqEntity);
-
-            // Execute the REST API call and get the response entity.
-            HttpResponse response = httpclient.execute(request);
-            HttpEntity entity = response.getEntity();
-
-            if (entity != null)
-            {
-                // Format and display the JSON response.
-                String jsonString = EntityUtils.toString(entity);
-                JSONObject json = new JSONObject(jsonString);
-                System.out.println("REST Response:\n");
-                System.out.println(json.toString(2));
-                
-            }
-        }
-        catch (Exception e)
-        {
-            // Display error message.
-            System.out.println(e.getMessage());
-        }
-        
-    }
-    
+//    public static void getImageRecognitionProperties(String imageuri) {
+//        
+//        HttpClient httpclient = new DefaultHttpClient();
+//
+//        try
+//        {
+//            URIBuilder builder = new URIBuilder(uriBase);
+//
+//            // Request parameters. All of them are optional.
+//            builder.setParameter("visualFeatures", "Categories,Description,Color");
+//            builder.setParameter("language", "en");
+//
+//            // Prepare the URI for the REST API call.
+//            URI uri = builder.build();
+//            HttpPost request = new HttpPost(uri);
+//
+//            // Request headers.
+//            request.setHeader("Content-Type", "application/json");
+//            request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+//
+//            // Request body.
+//            StringEntity reqEntity = new StringEntity("{\"url\":\""+imageuri+"\"}");
+//            request.setEntity(reqEntity);
+//
+//            // Execute the REST API call and get the response entity.
+//            HttpResponse response = httpclient.execute(request);
+//            HttpEntity entity = response.getEntity();
+//
+//            if (entity != null)
+//            {
+//                // Format and display the JSON response.
+//                String jsonString = EntityUtils.toString(entity);
+//                JSONObject json = new JSONObject(jsonString);
+//                System.out.println("REST Response:\n");
+//                System.out.println(json.toString(2));
+//                
+//            }
+//        }
+//        catch (Exception e)
+//        {
+//            // Display error message.
+//            System.out.println(e.getMessage());
+//        }
+//        
+//    }
+//    
     public static void displayFile() {
         try {
             BufferedImage myImage = ImageIO.read(new File(System.getProperty("user.dir") + File.separator + "downloadedFile.png"));

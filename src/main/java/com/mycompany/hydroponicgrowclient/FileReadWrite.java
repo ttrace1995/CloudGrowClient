@@ -31,6 +31,7 @@ public class FileReadWrite {
         writer.write(json);
      
         writer.close();
+        
     }
     
     public static Color getStateColor(String device) {

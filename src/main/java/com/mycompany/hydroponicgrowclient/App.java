@@ -5,11 +5,7 @@
  */
 package com.mycompany.hydroponicgrowclient;
 
-import com.microsoft.azure.storage.*;
-import com.microsoft.azure.storage.blob.*;
-import java.awt.Color;
-import java.awt.image.BufferedImage;
-import java.io.File;
+
 import java.io.IOException;
 
 
@@ -23,11 +19,13 @@ public class App {
      
     public static void main(String args[]) throws IOException, Exception {
         
+        Interface gui = new Interface();
+        
         EventListener evt = new EventListener();
         MessageSender.sendMessage("refresh:now");
-        Interface gui = new Interface();
-        gui.setVisible(true);
+        
         ImageContainer.connectToContainer();
+        gui.setVisible(true);
         
         
     }
