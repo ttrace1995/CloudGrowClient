@@ -43,15 +43,10 @@ public class Interface extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         imageArea = new javax.swing.JLabel();
         imageFolderSelector = new javax.swing.JComboBox<>();
-        viewFilterPrefixValue = new javax.swing.JTextField();
         viewFileSelectorValues = new javax.swing.JComboBox<>();
         refreshButton = new javax.swing.JButton();
         downloadFileButton = new javax.swing.JButton();
         cameraButton = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 204));
@@ -68,7 +63,7 @@ public class Interface extends javax.swing.JFrame {
         humidityValue.setText("...");
 
         lightButton.setBackground(FileReadWrite.getStateColor("light"));
-        lightButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Documents/HydroponicGrowClient/src/main/java/com/mycompany/hydroponicgrowclient/icons/icons8-light-on-96.png")); // NOI18N
+        lightButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Downloads/if_0015_Light-Bulb_171323.png")); // NOI18N
         lightButton.setBorderPainted(false);
         lightButton.setOpaque(true);
         lightButton.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +74,7 @@ public class Interface extends javax.swing.JFrame {
 
         pumpButton.setBackground(FileReadWrite.getStateColor("pump"));
         pumpButton.setForeground(new java.awt.Color(235, 72, 72));
-        pumpButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Documents/HydroponicGrowClient/src/main/java/com/mycompany/hydroponicgrowclient/icons/icons8-pump-96.png")); // NOI18N
+        pumpButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Downloads/if_watering_can_1880364.png")); // NOI18N
         pumpButton.setBorderPainted(false);
         pumpButton.setOpaque(true);
         pumpButton.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +85,7 @@ public class Interface extends javax.swing.JFrame {
 
         fanButton.setBackground(FileReadWrite.getStateColor("fan"));
         fanButton.setForeground(new java.awt.Color(255, 153, 153));
-        fanButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Documents/HydroponicGrowClient/src/main/java/com/mycompany/hydroponicgrowclient/icons/icons8-fan-96.png")); // NOI18N
+        fanButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Downloads/if_Car-Accessories_15_2178864.png")); // NOI18N
         fanButton.setBorderPainted(false);
         fanButton.setOpaque(true);
         fanButton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,16 +106,16 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(imageArea, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imageArea, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(imageArea, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imageArea, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -144,7 +139,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
-        cameraButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Downloads/icons8-screenshot-96.png")); // NOI18N
+        cameraButton.setIcon(new javax.swing.ImageIcon("/Users/tylertracey/Downloads/if_camera_115759.png")); // NOI18N
         cameraButton.setBorderPainted(false);
         cameraButton.setOpaque(true);
         cameraButton.addActionListener(new java.awt.event.ActionListener() {
@@ -160,31 +155,33 @@ public class Interface extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(temperatureValue, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(humidityValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(lightButton)
                         .addGap(18, 18, 18)
-                        .addComponent(fanButton)
+                        .addComponent(fanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(pumpButton))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(temperatureValue, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(humidityValue))
+                        .addComponent(pumpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(cameraButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(imageFolderSelector, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(viewFilterPrefixValue, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(viewFileSelectorValues, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(refreshButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                                .addComponent(downloadFileButton)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(downloadFileButton))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(viewFileSelectorValues, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(imageFolderSelector, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1061, 1061, 1061))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,118 +196,41 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(temperatureValue)
                             .addComponent(humidityValue))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lightButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pumpButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(fanButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lightButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pumpButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(fanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(6, 6, 6)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cameraButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
                                 .addComponent(imageFolderSelector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(viewFilterPrefixValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(38, 38, 38)
                                 .addComponent(viewFileSelectorValues, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(downloadFileButton)
-                                    .addComponent(refreshButton))))))
-                .addContainerGap(14, Short.MAX_VALUE))
+                                    .addComponent(refreshButton)))
+                            .addComponent(cameraButton))))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
-
-        jMenu1.setText("File");
-
-        jMenuItem1.setText("jMenuItem1");
-        jMenu1.add(jMenuItem1);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void lightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lightButtonActionPerformed
-        // TODO add your handling code here:
-            
-            try {
-                if (FileReadWrite.getLightState() == 1) {
-                    MessageSender.sendMessage("switch_command:lightOff.py");
-                }
-                else {
-                    MessageSender.sendMessage("switch_command:lightOn.py");
-                }
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    }//GEN-LAST:event_lightButtonActionPerformed
-
-    private void pumpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpButtonActionPerformed
-        // TODO add your handling code here:
-            try {
-                if (FileReadWrite.getPumpState() == 1) {
-                    MessageSender.sendMessage("switch_command:pumpOff.py");
-                }
-                else {
-                    MessageSender.sendMessage("switch_command:pumpOn.py");
-                }
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    }//GEN-LAST:event_pumpButtonActionPerformed
-
-    private void fanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fanButtonActionPerformed
-        // TODO add your handling code here:
-            try {
-                if (FileReadWrite.getFanState() == 1) {
-                    MessageSender.sendMessage("switch_command:fanOff.py");
-                }
-                else {
-                    MessageSender.sendMessage("switch_command:fanOn.py");
-                }
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    }//GEN-LAST:event_fanButtonActionPerformed
-
-    private void imageFolderSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageFolderSelectorActionPerformed
-        ImageContainer.populateImagesWithinFolder();
-    }//GEN-LAST:event_imageFolderSelectorActionPerformed
-
-    private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
-        ImageContainer.populateImagesWithinFolder();
-    }//GEN-LAST:event_refreshButtonActionPerformed
-
-    private void downloadFileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downloadFileButtonActionPerformed
-        
-        ImageContainer.downloadSelectedFile();
-        ImageContainer.displayFile();
-    }//GEN-LAST:event_downloadFileButtonActionPerformed
 
     private void cameraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cameraButtonActionPerformed
         try {
@@ -322,6 +242,69 @@ public class Interface extends javax.swing.JFrame {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_cameraButtonActionPerformed
+
+    private void downloadFileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downloadFileButtonActionPerformed
+
+        ImageContainer.downloadSelectedFile();
+        ImageContainer.displayFile();
+    }//GEN-LAST:event_downloadFileButtonActionPerformed
+
+    private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
+        ImageContainer.populateImagesWithinFolder();
+    }//GEN-LAST:event_refreshButtonActionPerformed
+
+    private void imageFolderSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageFolderSelectorActionPerformed
+        ImageContainer.populateImagesWithinFolder();
+    }//GEN-LAST:event_imageFolderSelectorActionPerformed
+
+    private void fanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fanButtonActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (FileReadWrite.getFanState() == 1) {
+                MessageSender.sendMessage("switch_command:fanOff.py");
+            }
+            else {
+                MessageSender.sendMessage("switch_command:fanOn.py");
+            }
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_fanButtonActionPerformed
+
+    private void pumpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpButtonActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (FileReadWrite.getPumpState() == 1) {
+                MessageSender.sendMessage("switch_command:pumpOff.py");
+            }
+            else {
+                MessageSender.sendMessage("switch_command:pumpOn.py");
+            }
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_pumpButtonActionPerformed
+
+    private void lightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lightButtonActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            if (FileReadWrite.getLightState() == 1) {
+                MessageSender.sendMessage("switch_command:lightOff.py");
+            }
+            else {
+                MessageSender.sendMessage("switch_command:lightOn.py");
+            }
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_lightButtonActionPerformed
 
 //    /**
 //     * @param args the command line arguments
@@ -366,10 +349,6 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JLabel imageArea;
     public static javax.swing.JComboBox<String> imageFolderSelector;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public static javax.swing.JButton lightButton;
@@ -377,6 +356,5 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JButton refreshButton;
     public static javax.swing.JLabel temperatureValue;
     public static javax.swing.JComboBox<String> viewFileSelectorValues;
-    public static javax.swing.JTextField viewFilterPrefixValue;
     // End of variables declaration//GEN-END:variables
 }

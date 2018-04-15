@@ -118,10 +118,10 @@ public class ImageContainer {
     public static void populateImagesWithinFolder() {
         Interface.viewFileSelectorValues.removeAllItems();
         String dir = Interface.imageFolderSelector.getItemAt(Interface.imageFolderSelector.getSelectedIndex())+"/";
-        String prefix = Interface.viewFilterPrefixValue.getText();
+        //String prefix = Interface.viewFilterPrefixValue.getText();
         try {
             CloudBlobDirectory directory = container.getDirectoryReference(dir);
-            Iterable<ListBlobItem> blobItems = directory.listBlobs(prefix);
+            Iterable<ListBlobItem> blobItems = directory.listBlobs();
             
             for(ListBlobItem item : blobItems){
                 CloudBlob blob = (CloudBlob)item;
